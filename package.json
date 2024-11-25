@@ -1,0 +1,29 @@
+{
+  "name": "lab_2_3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsx src/index.ts",
+    "typeorm": "ts-node ./node_modules/typeorm/cli.js",
+    "migration:generate": "tsx ./node_modules/typeorm/cli.js migration:generate -d src/data.source.ts -n",
+    "migration:run": "tsx ./node_modules/typeorm/cli.js migration:run -d src/data.source.ts",
+    "migration:revert": "tsx ./node_modules/typeorm/cli.js migration:revert -d src/data.source.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.1",
+    "mssql": "^11.0.1",
+    "reflect-metadata": "^0.2.2",
+    "swagger-ui-express": "^5.0.1",
+    "typeorm": "^0.3.20"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.9.3",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}
